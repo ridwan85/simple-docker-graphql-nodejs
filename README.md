@@ -30,10 +30,20 @@ Based on the test question :=>
 ```
 query {
   owners {
+    id,
     name,
     address,
     email,
-    id,
+    phone,
+    pet {
+        name,
+        age,
+        colour,
+        breed,
+        animal{
+            name
+        }
+    }
   }
 }
 ```
