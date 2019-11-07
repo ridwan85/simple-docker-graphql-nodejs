@@ -11,7 +11,7 @@ Make sure to run
 ```
 chmod u+x run.sh
 ```
-To make the script executable  
+To make the script **executable**  
 
 Go to <http://localhost:4000/graphql> to test the application.  
 
