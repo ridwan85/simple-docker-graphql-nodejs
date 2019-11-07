@@ -23,9 +23,8 @@ To make the script **executable**
 
 Go to <http://localhost:4000/graphql> to test the application.  
 
-Checkout the docs section on how to use the api.  
 
-Based on the test question :>  
+Based on the test question :=>  
 
 **TO LIST OWNERS**
 ```
@@ -89,3 +88,5 @@ query {
   }
 }
 ```
+
+Checkout the rest docs section on how to use the graphql api.  
