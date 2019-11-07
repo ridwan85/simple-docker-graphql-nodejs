@@ -3,7 +3,7 @@ services:
 #define a service called app
   app:
 #adding a container name
-    container_name: graphqlapp
+    container_name: adformtest
 #restart the container automatically if it fails
     restart: always
 #building the app image using the Dockerfile in the current directory

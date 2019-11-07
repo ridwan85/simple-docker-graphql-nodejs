@@ -2,8 +2,14 @@ This is an application made with **nodejs**,**docker** and **graphql**.
 Test is using **mocha/chai**.  
 This application is made for to answer a test.  
 
+Run script below to clone the application (**make sure git is installed**)
+```
+git clone https://github.com/ridwan85/inscale-adform-test.git
+```
+**OR** download  
 
-Upon cloning please run the bash file 
+
+Upon download/cloning please run the bash file 
 ```
 ./run.sh
 ```
