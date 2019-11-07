@@ -1,5 +1,5 @@
-This is an application made with nodejs,docker and graphql.  
-Test is using mocha/chai.  
+This is an application made with **nodejs**,**docker** and **graphql**.  
+Test is using **mocha/chai**.  
 This application is made for to answer a test.  
 
 
