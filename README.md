@@ -1,6 +1,6 @@
 This is an application made with **nodejs**,**express**,**docker** and **graphql**.  
 Test is using **mocha/chai**.  
-This application is made for the purpose of answering a test.  
+This application is made for the purpose of answering a **TEST**.  
 
 Run script below to clone the application (**make sure git is installed**)
 ```
