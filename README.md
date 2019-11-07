@@ -89,4 +89,4 @@ query {
 }
 ```
 
-Checkout the rest docs section on how to use the graphql api.  
+Checkout the rest of the docs section on how to use the graphql api.  
