@@ -26,7 +26,7 @@ Go to <http://localhost:4000/graphql> to test the application.
 
 Based on the test question :=>  
 
-**TO LIST OWNERS**
+**TO LIST OWNERS** (example)
 ```
 query {
   owners {
