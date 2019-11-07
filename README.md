@@ -10,8 +10,9 @@ git clone https://github.com/ridwan85/inscale-adform-test.git
 
 download from <https://github.com/ridwan85/inscale-adform-test/archive/master.zip> 
 
-**PREREQUISITE**  
-PLEASE MAKE SURE DOCKER,NODEJS IS INSTALLED BEFORE RUNNING THE SCRIPT  
+_________________________________________________________________________________________________
+*PREREQUISITE*
+Please make user **DOCKER** and **NODEJS** is **INSTALLED** before running the script
 
 -------------------------------------------------------------------------------------------------
 Upon download/cloning please run the bash file 
