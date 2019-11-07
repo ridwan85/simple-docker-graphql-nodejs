@@ -25,7 +25,7 @@ chmod u+x run.sh
 ```
 To make the script **executable**  
 
-Go to <http://localhost:4000/graphql> to test the application.  
+Go to <http://localhost:4000/graphql> to test the application. (*after the script run finished*).
 
 
 Based on the test question :=>  
