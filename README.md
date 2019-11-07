@@ -15,7 +15,7 @@ Upon download/cloning please run the bash file
 ```
 ./run.sh
 ```
-Make sure to run (**if you're in a *nix environment**)
+Make sure to run script below (**if you're in a *nix environment**)
 ```
 chmod u+x run.sh
 ```
