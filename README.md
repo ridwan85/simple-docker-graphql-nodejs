@@ -21,9 +21,8 @@ Upon download/cloning please run the bash file
 ```
 Make sure to run script below (**if you're in a *nix environment**)
 ```
-chmod u+x run.sh
+chmod u+x run.sh #To make the script **executable**  
 ```
-To make the script **executable**  
 
 Go to <http://localhost:4000/graphql> to test the application. (*after the script run finished*).
 
