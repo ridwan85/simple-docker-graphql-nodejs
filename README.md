@@ -11,7 +11,7 @@ git clone https://github.com/ridwan85/inscale-adform-test.git
 download from <https://github.com/ridwan85/inscale-adform-test/archive/master.zip> 
 
 _________________________________________________________________________________________________
-*PREREQUISITE*
+*PREREQUISITE*  
 Please make user **DOCKER** and **NODEJS** is **INSTALLED** before running the script
 
 -------------------------------------------------------------------------------------------------
