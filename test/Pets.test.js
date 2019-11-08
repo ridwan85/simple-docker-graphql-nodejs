@@ -94,50 +94,50 @@ describe("Pets", () => {
             });
     });
 
-    //   it("Add pets", done => {
-    //     request
-    //       .post("graphql")
-    //       .send({
-    //         query: `
-    //        mutation { 
-    //         addPet(
-    //             name:"Felix",
-    //             colour:"Pink",
-    //             breed:"Siamese Cat",
-    //             age:1,
-    //             ownerId:"3QDFxuWPSuNQ6JmxIy54U2SJdKeqzrWz",
-    //              animalId:"eCi7shetqUZJFrmiDCn1W8P3HgVzpIx2",
-    //             ){
-    //                 id,
-    //                 name,
-    //                 colour,
-    //                 breed,
-    //                 age,
-    //                 ownerId,
-    //                 animalId,
-    //                 owner{
-    //                     name
-    //                 }
-    //              }
-    //         }`
-    //       })
-    //       .expect(200)
-    //       .end((err, res) => {
-    //         // res will contain array of all pets
-    //         if (err) return done(err);
-    //         should.exist(res.body);
-    //         let data = res.body.data.addPet;
-    //         data.should.have.property("id");
-    //         data.should.have.property("name");
-    //         data.should.have.property("breed");
-    //         data.should.have.property("colour");
-    //         data.should.have.property("age");
-    //         data.should.have.property("ownerId");
-    //         data.should.have.property("animalId");
-    //         data.should.have.property("owner");
-    //         done();
-    //       });
-    //   });
+    it("Add pets", done => {
+        request
+            .post("graphql")
+            .send({
+                query: `
+           mutation { 
+            addPet(
+                name:"Felix",
+                colour:"Pink",
+                breed:"Siamese Cat",
+                age:1,
+                ownerId:"3QDFxuWPSuNQ6JmxIy54U2SJdKeqzrWz",
+                 animalId:"eCi7shetqUZJFrmiDCn1W8P3HgVzpIx2",
+                ){
+                    id,
+                    name,
+                    colour,
+                    breed,
+                    age,
+                    ownerId,
+                    animalId,
+                    owner{
+                        name
+                    }
+                 }
+            }`
+            })
+            .expect(200)
+            .end((err, res) => {
+                // res will contain array of all pets
+                if (err) return done(err);
+                should.exist(res.body);
+                let data = res.body.data.addPet;
+                data.should.have.property("id");
+                data.should.have.property("name");
+                data.should.have.property("breed");
+                data.should.have.property("colour");
+                data.should.have.property("age");
+                data.should.have.property("ownerId");
+                data.should.have.property("animalId");
+                data.should.have.property("owner");
+                done();
+            });
+    });
 
     it("Update pet with id = 'bO7Fabrhahh66Jb0TSN64XMD1OxTHK8X'", done => {
         request
@@ -168,7 +168,7 @@ describe("Pets", () => {
             })
             .expect(200)
             .end((err, res) => {
-                // res will contain array of all users
+
                 if (err) return done(err);
                 should.exist(res.body);
                 let data = res.body.data.updatePet;
@@ -198,7 +198,7 @@ describe("Pets", () => {
             })
             .expect(200)
             .end((err, res) => {
-                // res will contain array of all users
+
                 if (err) return done(err);
                 should.exist(res.body);
                 let data = res.body.data.deletePet;

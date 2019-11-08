@@ -107,7 +107,7 @@ describe("Owners", () => {
             })
             .expect(200)
             .end((err, res) => {
-                // res will contain array of all users
+
                 if (err) return done(err);
                 should.exist(res.body);
                 let data = res.body.data.updateOwner;
@@ -136,7 +136,7 @@ describe("Owners", () => {
             })
             .expect(200)
             .end((err, res) => {
-                // res will contain array of all users
+
                 if (err) return done(err);
                 should.exist(res.body);
                 let data = res.body.data.deleteOwner;
