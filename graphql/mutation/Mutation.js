@@ -1,16 +1,16 @@
-const addPet = require("./pet/AddPet").add;
-const updatePet = require("./pet/UpdatePet").update;
-const deletePet = require("./pet/DeletePet").remove;
+import { add as addPet } from "./pet/AddPet";
+import { update as updatePet } from "./pet/UpdatePet";
+import { remove as deletePet } from "./pet/DeletePet";
 
-const addOwner = require("./owner/AddOwner").add;
-const updateOwner = require("./owner/UpdateOwner").update;
-const deleteOwner = require("./owner/DeleteOwner").remove;
+import { add as addOwner } from "./owner/AddOwner";
+import { update as updateOwner } from "./owner/UpdateOwner";
+import { remove as deleteOwner } from "./owner/DeleteOwner";
 
 module.exports = {
-  addPet,
-  updatePet,
-  deletePet,
-  addOwner,
-  updateOwner,
-  deleteOwner
+    addPet,
+    updatePet,
+    deletePet,
+    addOwner,
+    updateOwner,
+    deleteOwner
 };

@@ -1,24 +1,28 @@
 {
-  "name": "inscale-adform-test",
-  "version": "1.0.0",
-  "description": "An application for ADFORM test under INSCALE",
-  "main": "server.js",
-  "scripts": {
-    "test": "mocha test/*.test.js",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "Ridwan",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "express-graphql": "^0.6.12",
-    "graphql": "^14.0.2",
-    "randomstring": "^1.1.5"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "supertest": "^4.0.2"
-  }
+    "name": "inscale-adform-test",
+    "version": "1.0.0",
+    "description": "An application for ADFORM test under INSCALE",
+    "main": "server.js",
+    "scripts": {
+        "test": "mocha test/*.test.js",
+        "start": "npm run build && node dist/server.js",
+        "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules"
+    },
+    "keywords": [],
+    "author": "Ridwan",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4",
+        "express-graphql": "^0.6.12",
+        "graphql": "^14.0.2",
+        "randomstring": "^1.1.5"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "rimraf": "^3.0.0",
+        "supertest": "^4.0.2"
+    }
 }

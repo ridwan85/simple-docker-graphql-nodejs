@@ -1,11 +1,10 @@
-"use strict";
-const { GraphQLNonNull, GraphQLString, GraphQLInt } = require("graphql");
-const petType = require("../../Types");
-const fs = require("fs");
+import { GraphQLNonNull, GraphQLString, GraphQLInt } from "graphql";
+import { petType } from "../../Types";
+import fs from "fs";
 
-exports.update = {
+const update = {
     description: "This action will update single pet inside the system",
-    type: petType.petType,
+    type: petType,
     args: {
         id: {
             type: new GraphQLNonNull(GraphQLString)
@@ -56,3 +55,5 @@ exports.update = {
         });
     }
 };
+
+module.exports = { update };

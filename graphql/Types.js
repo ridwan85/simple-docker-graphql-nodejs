@@ -1,19 +1,18 @@
-"use strict";
-const {
+import {
     GraphQLObjectType,
     GraphQLNonNull,
     GraphQLID,
     GraphQLString,
     GraphQLInt,
     GraphQLList
-} = require("graphql");
+} from "graphql";
 
-const fs = require("fs");
+import fs from "fs";
 
 const ownerType = new GraphQLObjectType({
     description: "Owner Data type",
     name: "owner",
-    fields: () => {
+    fields: function fields() {
         return {
             id: {
                 type: new GraphQLNonNull(GraphQLID)
@@ -24,17 +23,17 @@ const ownerType = new GraphQLObjectType({
             email: { type: GraphQLString },
             pet: {
                 type: new GraphQLList(petType),
-                resolve(root, args) {
-                    return new Promise((resolve, reject) => {
+                resolve: function resolve(root, args) {
+                    return new Promise(function(resolve, reject) {
                         try {
-                            fs.readFile("data/pets.json", "utf8", (err, jsonData) => {
+                            fs.readFile("data/pets.json", "utf8", function(err, jsonData) {
                                 if (err) reject(err);
                                 if (!jsonData) {
-                                    let data = [];
+                                    var data = [];
                                     resolve(data);
                                 } else {
-                                    let arr = JSON.parse(jsonData);
-                                    let filtered = arr.filter(item => {
+                                    var arr = JSON.parse(jsonData);
+                                    var filtered = arr.filter(function(item) {
                                         return item.ownerId == root.id;
                                     });
                                     resolve(filtered);
@@ -54,7 +53,7 @@ const ownerType = new GraphQLObjectType({
 const petType = new GraphQLObjectType({
     description: "Pet Data type",
     name: "pet",
-    fields: () => {
+    fields: function fields() {
         return {
             id: {
                 type: new GraphQLNonNull(GraphQLID)
@@ -67,19 +66,19 @@ const petType = new GraphQLObjectType({
             breed: { type: GraphQLString },
             owner: {
                 type: ownerType,
-                resolve(root, args) {
-                    return new Promise((resolve, reject) => {
+                resolve: function resolve(root, args) {
+                    return new Promise(function(resolve, reject) {
                         try {
-                            fs.readFile("data/owners.json", "utf8", (err, jsonData) => {
+                            fs.readFile("data/owners.json", "utf8", function(err, jsonData) {
                                 if (err) reject(err);
                                 if (!jsonData) {
-                                    let data = [];
+                                    var data = [];
                                     resolve(data);
                                 } else {
-                                    console.log("ROOT", root);
-                                    let arr = JSON.parse(jsonData);
-                                    console.log(arr);
-                                    let filtered = arr.filter(item => {
+
+                                    var arr = JSON.parse(jsonData);
+
+                                    var filtered = arr.filter(function(item) {
                                         return item.id == root.ownerId;
                                     });
                                     //return only single data as a pet belong to 1 owner
@@ -94,19 +93,19 @@ const petType = new GraphQLObjectType({
             },
             animal: {
                 type: animalType,
-                resolve(root, args) {
-                    return new Promise((resolve, reject) => {
+                resolve: function resolve(root, args) {
+                    return new Promise(function(resolve, reject) {
                         try {
-                            fs.readFile("data/animal.json", "utf8", (err, jsonData) => {
+                            fs.readFile("data/animal.json", "utf8", function(err, jsonData) {
                                 if (err) reject(err);
                                 if (!jsonData) {
-                                    let data = [];
+                                    var data = [];
                                     resolve(data);
                                 } else {
-                                    console.log("ROOT", root);
-                                    let arr = JSON.parse(jsonData);
-                                    console.log(arr);
-                                    let filtered = arr.filter(item => {
+
+                                    var arr = JSON.parse(jsonData);
+
+                                    var filtered = arr.filter(function(item) {
                                         return item.id == root.animalId;
                                     });
                                     //return only single data as 1 pet is only 1 type of animal
@@ -126,7 +125,7 @@ const petType = new GraphQLObjectType({
 const animalType = new GraphQLObjectType({
     description: "Animal Data type",
     name: "animal",
-    fields: () => {
+    fields: function fields() {
         return {
             id: {
                 type: new GraphQLNonNull(GraphQLID)
@@ -137,4 +136,4 @@ const animalType = new GraphQLObjectType({
     }
 });
 
-module.exports = { petType, ownerType, animalType };
+module.exports = { petType: petType, ownerType: ownerType, animalType: animalType }

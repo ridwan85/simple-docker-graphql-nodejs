@@ -1,12 +1,11 @@
-"use strict";
-const { GraphQLNonNull, GraphQLString, GraphQLInt } = require("graphql");
-const petType = require("../../Types");
-const fs = require("fs");
-const random = require("randomstring");
+import { GraphQLNonNull, GraphQLString, GraphQLInt } from "graphql";
+import { petType } from "../../Types";
+import fs from "fs";
+import random from "randomstring";
 
-exports.add = {
+const add = {
     description: "This action will add single pet into the system",
-    type: petType.petType,
+    type: petType,
     args: {
         name: {
             type: new GraphQLNonNull(GraphQLString)
@@ -67,3 +66,5 @@ exports.add = {
         });
     }
 };
+
+module.exports = { add };
