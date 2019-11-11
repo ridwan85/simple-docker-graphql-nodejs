@@ -1,7 +1,8 @@
-const chai = require("chai");
+"use strict";
 
-const expect = chai.expect;
-const url = `http://localhost:4000/`;
+const chai = require("chai");
+const port = process.env.PORT || 4000;
+const url = `http://localhost:${port}/`;
 const request = require("supertest")(url);
 const should = require("chai").should();
 
@@ -77,6 +78,45 @@ describe("Owners", () => {
                     data[i].should.have.property("email");
                     data[i].should.have.property("pet");
                 }
+                done();
+            });
+    });
+
+    it("Add owner", done => {
+        request
+            .post("graphql")
+            .send({
+                query: `
+                mutation {
+                    addOwner(
+                      name : "Hachiko"
+                      phone : "01132086314",
+                      email : "rdwn.dev@gmail.com",
+                      address : "Jalan 1, 47820 Petaling Jaya"
+                    ) {
+                      id,
+                      name,
+                      phone,
+                      email,
+                      address,
+                      pet {
+                        id
+                      }
+                    }
+                  }`
+            })
+            .expect(200)
+            .end((err, res) => {
+                // res will contain array of all pets
+                if (err) return done(err);
+                should.exist(res.body);
+                let data = res.body.data.addOwner;
+                data.should.have.property("id");
+                data.should.have.property("name");
+                data.should.have.property("phone");
+                data.should.have.property("address");
+                data.should.have.property("email");
+                data.should.have.property("pet");
                 done();
             });
     });

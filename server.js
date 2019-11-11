@@ -1,8 +1,8 @@
-'use strict';
-const express = require('express');
+import express from 'express';
+import graphqlExpress from "express-graphql";
+import { Schema } from "./graphql/Schema";
+
 const app = express();
-const graphqlExpress = require("express-graphql");
-const schema = require('./graphql/Schema').Schema;
 
 app.set('port', (process.env.PORT || 4000));
 app.listen(app.get('port'), () => {
@@ -11,7 +11,7 @@ app.listen(app.get('port'), () => {
 
 //add the schema to graphql-express 
 app.use('/graphql', graphqlExpress({
-    schema: schema,
+    schema: Schema,
     rootValue: global,
     graphiql: true
 }));
