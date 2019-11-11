@@ -12,7 +12,7 @@ download from <https://github.com/ridwan85/inscale-adform-test/archive/master.zi
 
 _________________________________________________________________________________________________
 *PREREQUISITE*  
-Please make user **DOCKER** and **NODEJS** is **INSTALLED** before running the script
+Please make sure **DOCKER** and **NODEJS** is **INSTALLED** before running the script
 
 -------------------------------------------------------------------------------------------------
 Upon download/cloning please run the bash file 
