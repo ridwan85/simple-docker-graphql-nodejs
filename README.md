@@ -15,6 +15,11 @@ ________________________________________________________________________________
 Please make sure **DOCKER** and **NODEJS** is **INSTALLED** before running the script
 
 -------------------------------------------------------------------------------------------------
+Please make sure to change the PORT in the .env file to your desired port.  
+```
+PORT=4000
+```  
+
 Upon download/cloning please run the bash file 
 ```
 ./run.sh
