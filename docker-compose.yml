@@ -1,6 +1,6 @@
 version: "2"
 services:
-#define a service called graphqlapp
+#define a service called adformtest
   app:
 #adding a container name
     container_name: adformtest
