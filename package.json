@@ -12,6 +12,7 @@
     "author": "Ridwan",
     "license": "ISC",
     "dependencies": {
+        "dotenv": "^8.2.0",
         "express": "^4.16.4",
         "express-graphql": "^0.6.12",
         "graphql": "^14.0.2",

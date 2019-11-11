@@ -10,4 +10,4 @@ services:
     build: .
 #mapping the host port to the container port.
     ports:
-      - "4000:4000"
+      - "${PORT}:${PORT}"

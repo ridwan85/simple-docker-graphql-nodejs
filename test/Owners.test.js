@@ -1,7 +1,7 @@
 "use strict";
-
+require("dotenv").config();
 const chai = require("chai");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 const url = `http://localhost:${port}/`;
 const request = require("supertest")(url);
 const should = require("chai").should();
