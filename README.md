@@ -4,7 +4,7 @@ This application is made for the purpose of answering a **test**.
 
 Run script below to clone the application (**make sure git is installed**)
 ```
-git clone https://github.com/ridwan85/inscale-adform-test.git
+git clone https://github.com/ridwan85/simple-docker-graphql-nodejs.git
 ```
 **OR** 
 
