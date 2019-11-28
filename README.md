@@ -8,7 +8,7 @@ git clone https://github.com/ridwan85/inscale-adform-test.git
 ```
 **OR** 
 
-download from <https://github.com/ridwan85/inscale-adform-test/archive/master.zip> 
+download from <https://github.com/ridwan85/simple-docker-graphql-nodejs/archive/master.zip> 
 
 _________________________________________________________________________________________________
 *PREREQUISITE*  
